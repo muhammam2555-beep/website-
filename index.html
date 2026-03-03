@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentNexus Global | Elite Professional Directory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fa-solid fa-globe"></i> TalentNexus <span>Global</span>
+        </div>
+        <div class="nav-filters">
+            <div class="search-wrap">
+                <i class="fa-solid fa-search text-cyan"></i>
+                <input type="text" id="global-search" placeholder="Global Search...">
+            </div>
+            <select id="filter-industry">
+                <option value="all">All Industries</option>
+            </select>
+            <select id="filter-country">
+                <option value="all">All Locations</option>
+            </select>
+            <select id="filter-experience">
+                <option value="all">All Levels</option>
+                <option value="Executive">Executive</option>
+                <option value="Senior">Senior</option>
+                <option value="Director">Director</option>
+            </select>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="ai-badge"><i class="fa-solid fa-microchip"></i> Powered by TalentNexus AI</div>
+            <h1>Find the perfect expert using our <span class="highlight-cyan">AI Neural Search</span></h1>
+            <p>Connect with the top 1% of global professionals. Curated by proprietary AI models for unparalleled elite matchmaking.</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Progress bar or skeleton container -->
+        <div id="loading-state" class="loading-state">
+            <div class="loader-bar"></div>
+            <p>Initializing Global Network...</p>
+        </div>
+
+        <div id="grid-container" class="profile-grid hidden">
+            <!-- Profile Cards populated here via JS -->
+        </div>
+    </main>
+
+    <!-- Deep Dive Modal -->
+    <div id="profile-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-header">
+                <img id="modal-img" src="" alt="Profile Headshot">
+                <div class="modal-title">
+                    <h2 id="modal-name">Name <i class="fa-solid fa-circle-check blue-tick"></i></h2>
+                    <p id="modal-power-skill" class="power-skill-text">Skill</p>
+                    <div class="modal-badges">
+                        <span class="badge verified"><i class="fa-solid fa-shield-halved"></i> Verified Expertise</span>
+                        <span class="badge ai-verified"><i class="fa-solid fa-robot"></i> Verified by AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Professional Bio</h3>
+                    <p id="modal-bio" class="bio-text">Loading...</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Past Projects</h3>
+                    <div class="project-gallery" id="modal-projects">
+                        <!-- Projects injected via JS -->
+                    </div>
+                </div>
+                <button class="schedule-btn"><i class="fa-regular fa-calendar-check"></i> Schedule Consultation</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="global-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand"><i class="fa-solid fa-globe"></i> TalentNexus Global</div>
+                <p>Curating the world's elite talent ecosystem.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Global Offices</h4>
+                <ul class="office-list">
+                    <li><i class="fa-solid fa-location-dot"></i> London</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Dubai</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Islamabad</li>
+                    <li><i class="fa-solid fa-location-dot"></i> New York</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Tokyo</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li>Privacy Terms</li>
+                    <li>Cookie Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Join the Elite</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email...">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 TalentNexus Global. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
